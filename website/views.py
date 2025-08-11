@@ -15,13 +15,13 @@ def home():
 
 # about route
 @views.route("/about")
-def gallery():
+def about():
     return render_template("about.html")
 
 
 # combat type route
 @views.route("/combat_type")
-def contact():
+def combat_type():
     return render_template("combat_type.html")
 
 # sign up route
@@ -31,45 +31,45 @@ def sign_up():
 
 # faq route
 @views.route("/faq")
-def sign_up():
+def faq():
     return render_template("faq.html")
 
 # gingerbrave route
 @views.route("/gingerbrave")
-def sign_up():
+def gingerbrave():
     return render_template("gingerbrave.html")
 
 # strawberry cookie route
 @views.route("/strawberry")
-def sign_up():
+def strawberry():
     return render_template("strawberry.html")
 
 # wizard cookie route
 @views.route("/wizard")
-def sign_up():
+def wizard():
     return render_template("wizard.html")
 
 # custard cookie iii route
 @views.route("/custard")
-def sign_up():
+def custard():
     return render_template("custard.html")
 
 # chili pepper cookie route
 @views.route("/chili")
-def sign_up():
+def chili():
     return render_template("chili.html")
 
 # lime cookie route
 @views.route("/lime")
-def sign_up():
+def lime():
     return render_template("lime.html")
 
 # jagae cookie route
 @views.route("/jagae")
-def sign_up():
+def jagae():
     return render_template("jagae.html")
 
 # manju cookie route
 @views.route("/manju")
-def sign_up():
+def manju():
     return render_template("manju.html")

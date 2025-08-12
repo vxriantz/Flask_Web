@@ -19,10 +19,10 @@ def about():
     return render_template("about.html")
 
 
-# combat type route
-@views.route("/combat_type")
-def combat_type():
-    return render_template("combat_type.html")
+# cookie type route
+@views.route("/cookie_type")
+def cookie_type():
+    return render_template("cookie_type.html")
 
 # cookies route
 @views.route("/cookies")

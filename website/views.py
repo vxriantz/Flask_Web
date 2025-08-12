@@ -24,6 +24,11 @@ def about():
 def combat_type():
     return render_template("combat_type.html")
 
+# cookies route
+@views.route("/cookies")
+def cookies():
+    return render_template("cookies.html")
+
 # sign up route
 @views.route("/sign_up")
 def sign_up():

@@ -18,7 +18,6 @@ def home():
 def about():
     return render_template("about.html")
 
-
 # cookie type route
 @views.route("/cookie_type")
 def cookie_type():

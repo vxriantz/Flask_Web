@@ -2,6 +2,91 @@
 
 {% block content %} 
 
-<h1> Custard Cookie III </h1>
+<!-- Styling -->
+<style>
+    /* Floating Contents Sidebar */
+    #contents-nav {
+        position: sticky;
+        top: 20px;
+        background: #fff4dc;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #dcb98e;
+    }
+    #contents-nav h6 {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    #contents-nav a {
+        text-decoration: none;
+        color: #8b4513;
+        font-size: 14px;
+    }
+    #contents-nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Infobox */
+    .card {
+        border: 1px solid #dcb98e;
+        background-color: #fff4dc;
+    }
+    .card-title {
+        font-weight: bold;
+    }
+</style>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Left: Floating Contents -->
+        <div class="col-md-2 d-none d-md-block">
+            <nav id="contents-nav">
+                <h6>Contents</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#section1">Support</a></li>
+                    <li><a href="#section2">Ambush</a></li>
+                    <li><a href="#section3">Charge</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Middle: Main Content -->
+        <div class="col-md-7">
+            <h1>Custard Cookie III</h1>
+            <p>This is the introduction about the cookie. It covers the cookie's lore, abilities, and general background.</p>
+
+            <section id="section1">
+                <h2>Support</h2>
+                <p>Support cookies provide buffs or healing to their team...</p>
+            </section>
+            <hr>
+            <section id="section2">
+                <h2>Ambush</h2>
+                <p>Ambush cookies are high-damage dealers who excel at sneak attacks...</p>
+            </section>
+            <hr>
+            <section id="section3">
+                <h2>Charge</h2>
+                <p>Charge cookies rush to the front lines and protect the team...</p>
+            </section>
+        </div>
+
+        <!-- Right: Cookie Infobox -->
+        <div class="col-md-3">
+            <div class="card sticky-top" style="top: 20px;">
+                <img src="static/assets/img/custard_cookie1.webp" 
+                     class="card-img-top" alt="Cookie Name">
+                <div class="card-body">
+                    <h5 class="card-title">Cookie Name</h5>
+                    <p><strong>Type:</strong> Ambush</p>
+                    <p><strong>Rarity:</strong> Epic</p>
+                    <p><strong>Release Date:</strong> Jan 1, 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

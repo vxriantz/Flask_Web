@@ -15,39 +15,8 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
-        <link rel="icon" href="./favicon.ico" type="image/x-icon">
-        <!--Styles-->
-        <style>
-            .banner {
-                background-color: #969696;
-                color: #000000;
-                padding: 10px;
-                text-align: center;
-            }
-            .side-nav {
-            position: sticky;
-            top: 20px;
-            padding: 1rem;
-            background-color: #fff3e0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            }
-            .cookie-info {
-            display: flex;
-            gap: 2rem;
-            align-items: flex-start;
-            }
-            .cookie-info img {
-            max-width: 250px;
-            border-radius: 10px;
-            }
-            .cookie-main {
-            flex: 1;
-            }
-            .content-section {
-            margin-bottom: 3rem;
-            }
-        </style>
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">s
+
     </head>
    <body style="background-color: #F5DBB4;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -64,6 +33,7 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
+      {% if current_user.is_authenticated %}
         <li class="nav-item">
           <a class="nav-link" href="/cookie_type">Cookie Type</a>
         </li>
@@ -71,12 +41,24 @@
         <li class="nav-item">
           <a class="nav-link" href="/cookies">Cookies</a>
         </li>
+      {% endif %} 
+        <li class="nav-item">
+          <a class="nav-link" href="/faq">FAQ</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+      {% if not current_user.is_authenticated %}
         <li class="nav-item">
           <a class="nav-link" href="/sign_up">Sign Up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/faq">FAQ</a>
+          <a class="nav-link" href="/login">Login</a>
         </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+      {% endif %}
       </ul>
     </div>
   </div>
@@ -86,7 +68,7 @@
   <h3>**Disclaimer: Website Under Construction**</h3>
 </div>
 
-    <div class-"container">{% block content %} {% endblock %}</div>
+<div class-"container">{% block content %} {% endblock %}</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>

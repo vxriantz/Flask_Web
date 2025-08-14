@@ -1,5 +1,8 @@
 from flask import Blueprint, render_template
-
+from flask import Blueprint, render_template, request, flash, redirect, url_for
+from .models import User, Note
+from . import db
+from flask_login import login_user, login_required, logout_user, current_user
 
 # set blueprint
 views = Blueprint("views", __name__)
@@ -33,10 +36,26 @@ def cookies():
 def sign_up():
     return render_template("sign_up.html")
 
+# login route
+@views.route("/sign_up")
+def login():
+    return render_template("login.html")
+
 # faq route
-@views.route("/faq")
+#faq route
+@views.route("/faq", methods=['POST', 'GET'])
 def faq():
-    return render_template("faq.html")
+    if request.method == 'POST':
+        note = request.form.get('note')
+        if len(note) <1:
+            flash('Comment cannot be empty.')
+        else:
+            new_note = Note(data=note, user_id=current_user.id)
+            db.session.add(new_note)
+            db.session.commit()
+            flash('Comment Added.', category='success')
+    
+    return render_template("faq.html", user=current_user)
 
 # gingerbrave route
 @views.route("/gingerbrave")

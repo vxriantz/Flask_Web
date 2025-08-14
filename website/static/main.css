@@ -1,0 +1,29 @@
+.banner {
+    background-color: #969696;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+.side-nav {
+position: sticky;
+top: 20px;
+padding: 1rem;
+background-color: #fff3e0;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.cookie-info {
+display: flex;
+gap: 2rem;
+align-items: flex-start;
+}
+.cookie-info img {
+max-width: 250px;
+border-radius: 10px;
+}
+.cookie-main {
+flex: 1;
+}
+.content-section {
+margin-bottom: 3rem;
+}

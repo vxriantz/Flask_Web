@@ -7,9 +7,7 @@ from . import db
 
 auth = Blueprint('auth', __name__)
 #Signup route
-@auth.route("/sign-up", methods=['GET', 'POST'])
-@auth.route("/signup", methods=['GET', 'POST'])
-@auth.route("/sign up", methods=['GET', 'POST'])
+@auth.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
     if request.method =='POST':
         email = request.form.get('email')

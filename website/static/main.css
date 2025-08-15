@@ -1,3 +1,17 @@
+html, body {
+  height: 100%;
+  margin: 0; /* remove default spacing */
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+    width: 100%;
+}
+.content {
+  flex: 1; /* pushes footer down when content is short */
+}
 .banner {
     background-color: #969696;
     color: #000000;
@@ -34,4 +48,12 @@ margin-bottom: 3rem;
 .game-content{
     font-style: italic;
     text-align: justify;
+}
+.about-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.about-page main {
+    flex: 1;
 }

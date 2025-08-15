@@ -78,3 +78,10 @@ margin-bottom: 3rem;
     margin-top: 10px;
     margin-bottom: 3px;
 }
+.form-group {
+    margin-top: 1%;
+}
+.form-control {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

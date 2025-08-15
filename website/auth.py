@@ -6,7 +6,7 @@ from . import db
 
 
 auth = Blueprint('auth', __name__)
-#Signup route
+# Signup route
 @auth.route("/sign_up", methods=['GET', 'POST'])
 def sign_up():
     if request.method =='POST':
@@ -45,7 +45,7 @@ def sign_up():
     return render_template("sign_up.html", user = current_user)
 
 
-#Login route
+# Login route
 @auth.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -64,7 +64,7 @@ def login():
     return render_template('login.html', user=current_user)
 
 
-#logout route
+# logout route
 @auth.route("/logout")
 @login_required
 def logout():

@@ -15,12 +15,6 @@ views = Blueprint("views", __name__)
 def home():
     return render_template("home.html")
 
-
-# about route
-@views.route("/about")
-def about():
-    return render_template("about.html")
-
 # cookie type route
 @views.route("/cookie_type")
 def cookie_type():

@@ -17,6 +17,7 @@ footer {
     color: #000000;
     padding: 10px;
     text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .side-nav {
 position: sticky;
@@ -56,4 +57,7 @@ margin-bottom: 3rem;
 }
 .about-page main {
     flex: 1;
+}
+.card {
+    margin-top: 20px;
 }

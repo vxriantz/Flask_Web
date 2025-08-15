@@ -67,6 +67,7 @@ margin-bottom: 3rem;
 }
 .card {
     margin-top: 20px;
+    background-color: #FFEBCC;
 }
 .dmg-stats {
     font-style: italic;

@@ -6,6 +6,12 @@ body {
   display: flex;
   flex-direction: column;
 }
+a {
+    color: #A58B68;
+}
+li {
+    color: #49565b;
+}
 footer {
     width: 100%;
 }

@@ -49,6 +49,7 @@ margin-bottom: 3rem;
 .game-content{
     font-style: italic;
     text-align: justify;
+    margin-bottom: 2px;
 }
 .about-page {
     display: flex;
@@ -60,4 +61,13 @@ margin-bottom: 3rem;
 }
 .card {
     margin-top: 20px;
+}
+.dmg-stats {
+    font-style: italic;
+    font-size: 14px;
+}
+.skill-subhead {
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-bottom: 3px;
 }

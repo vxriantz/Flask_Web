@@ -85,3 +85,14 @@ margin-bottom: 3rem;
     margin-top: 1%;
     margin-bottom: 1%;
 }
+.toc {
+    padding: 10px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #FFD580; /* light orange */
+    color: #000; /* black text*/
+    box-shadow: none; /* removes glow */
+}
+.accordion-button:focus {
+    box-shadow: none; /* removes the outline/glow when clicked */
+}
